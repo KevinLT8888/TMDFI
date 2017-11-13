@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 lowRISC chip
 ==============================================
 
@@ -42,3 +43,7 @@ git clone -b tagged-memory-v0.1 --recursive https://github.com/lowrisc/lowrisc-c
 [master]: https://github.com/lowrisc/lowrisc-chip/tree/master
 [update]: https://github.com/lowrisc/lowrisc-chip/tree/update
 [dev]: https://github.com/lowrisc/lowrisc-chip/tree/dev
+=======
+# TMDFI
+Implement the DataFlow Integrity mechanism on rocket-core hardware to accelerate
+>>>>>>> 31dba9bf55d1e8eded3be7edaf90a43cb51d14ef
