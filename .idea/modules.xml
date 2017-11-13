@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bridge.iml" filepath="$PROJECT_DIR$/.idea/modules/bridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bridge-build.iml" filepath="$PROJECT_DIR$/.idea/modules/bridge-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cde.iml" filepath="$PROJECT_DIR$/.idea/modules/cde.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cde-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cde-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chisel.iml" filepath="$PROJECT_DIR$/.idea/modules/chisel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chisel-build.iml" filepath="$PROJECT_DIR$/.idea/modules/chisel-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hardfloat.iml" filepath="$PROJECT_DIR$/.idea/modules/hardfloat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hardfloat-build.iml" filepath="$PROJECT_DIR$/.idea/modules/hardfloat-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lowrisc_chip.iml" filepath="$PROJECT_DIR$/.idea/modules/lowrisc_chip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lowrisc_chip-build.iml" filepath="$PROJECT_DIR$/.idea/modules/lowrisc_chip-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/open_soc_debug.iml" filepath="$PROJECT_DIR$/.idea/modules/open_soc_debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/open_soc_debug-build.iml" filepath="$PROJECT_DIR$/.idea/modules/open_soc_debug-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rocket.iml" filepath="$PROJECT_DIR$/.idea/modules/rocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rocket-build.iml" filepath="$PROJECT_DIR$/.idea/modules/rocket-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/uncore.iml" filepath="$PROJECT_DIR$/.idea/modules/uncore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/uncore-build.iml" filepath="$PROJECT_DIR$/.idea/modules/uncore-build.iml" />
+    </modules>
+  </component>
+</project>

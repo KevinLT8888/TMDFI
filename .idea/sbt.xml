@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="jdk" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/chisel" />
+            <option value="$PROJECT_DIR$/chisel/project" />
+            <option value="$PROJECT_DIR$/context-dependent-environments" />
+            <option value="$PROJECT_DIR$/context-dependent-environments/project" />
+            <option value="$PROJECT_DIR$/hardfloat" />
+            <option value="$PROJECT_DIR$/hardfloat/project" />
+            <option value="$PROJECT_DIR$/junctions" />
+            <option value="$PROJECT_DIR$/junctions/project" />
+            <option value="$PROJECT_DIR$/opensocdebug/hardware" />
+            <option value="$PROJECT_DIR$/opensocdebug/hardware/project" />
+            <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/rocket" />
+            <option value="$PROJECT_DIR$/rocket/project" />
+            <option value="$PROJECT_DIR$/uncore" />
+            <option value="$PROJECT_DIR$/uncore/project" />
+          </set>
+        </option>
+        <option name="resolveSbtClassifiers" value="true" />
+        <option name="sbtVersion" value="0.13.8" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
+      </SbtProjectSettings>
+    </option>
+  </component>
+</project>

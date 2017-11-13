@@ -1,0 +1,2 @@
+export VERILATOR_ROOT=/home/kevin/lowrisc-chip/verilator
+export RISCV=/home/kevin/lowrisc-chip

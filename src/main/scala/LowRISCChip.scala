@@ -96,7 +96,7 @@ object TopUtils {
 class Top(topParams: Parameters) extends Module with HasTopLevelParameters {
   implicit val p = topParams
   val io = new TopIO
-
+  println("starting")
   ////////////////////////////////////////////
   // local partial parameter overrides
 
@@ -116,7 +116,7 @@ class Top(topParams: Parameters) extends Module with HasTopLevelParameters {
   val addrHashMap = p(GlobalAddrHashMap)
   AllAddrMapEntries += addrHashMap
 
-  // TODO: the code to print this stuff should live somewhere else
+  /* TODO: the code to print this stuff should live somewhere else*/
   println("Generated Address Map")
   addrHashMap.getEntries map { case (name, AddrHashMapEntry(_, base, region)) => {
     println(f"\t$name%s $base%x - ${base + region.size - 1}%x")
@@ -148,6 +148,7 @@ class Top(topParams: Parameters) extends Module with HasTopLevelParameters {
 
   ////////////////////////////////////////////
   // L2 cache coherence managers
+  println("L2 cache coherence managers")
   val managerEndpoints = List.tabulate(nBanks){ id =>
     {
       if(p(UseL2Cache)) {
@@ -181,6 +182,7 @@ class Top(topParams: Parameters) extends Module with HasTopLevelParameters {
 
   ////////////////////////////////////////////
   // the network between L2 and memory/tag cache
+  println("the network between L2 and memory/tag cache")
   def routeL2ToMem(addr: UInt) = UInt(1) // this route function is one-hot
   def routeMemToL2(id: UInt) = id
   val mem_net = Module(new ClientUncachedTileLinkIOCrossbar(nBanks, 1, routeL2ToMem)(memNetParams))
@@ -188,7 +190,9 @@ class Top(topParams: Parameters) extends Module with HasTopLevelParameters {
 
   ////////////////////////////////////////////
   // tag cache
+
   if(p(UseTagMem)) {
+    println("making tag cache")
     val tc = Module(new TagCache()(p.alterPartial({
       case CacheName => tagCacheId
       case TLId => memConvParams(TLId)
@@ -205,6 +209,7 @@ class Top(topParams: Parameters) extends Module with HasTopLevelParameters {
   // MMIO interconnect
 
   // mmio interconnect
+  println("mmio")
   val (ioBase, ioAddrMap) = addrHashMap.subMap("io")
   val ioAddrHashMap = new AddrHashMap(ioAddrMap, ioBase)
   val mmio_net = Module(new TileLinkRecursiveInterconnect(1, ioAddrMap, ioBase)(ioNetParams))

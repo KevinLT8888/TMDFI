@@ -1,5 +1,6 @@
 # See LICENSE for license details.
-
+export VERILATOR_ROOT=/home/kevin/lowrisc-chip/verilator
+export RISCV=/home/kevin/lowrisc-chip
 # check Verilator environment variable
 ifndef VERILATOR_ROOT
 $(error Please set environment for the Verilator simulator)
@@ -255,13 +256,13 @@ rv64si = $(rv32si)
 
 rv64mi = $(rv32mi)
 
-bmarks = median multiply qsort towers vvadd mm dhrystone spmv mt-vvadd mt-matmul
+bmarks = median.riscv multiply.riscv qsort.riscv towers.riscv vvadd.riscv mm.riscv dhrystone.riscv spmv.riscv mt-vvadd.riscv mt-matmul.riscv
 
-rv64tag_ui = tagrw alu load store storekeep jmp
+rv64tag_ui = tagrw load store storekeep jmp
 
-rv64tag_mi = alucheck loadcheck storecheck pctag jmpcheck fetchcheck
+rv64tag_mi = loadcheck storecheck jmpcheck 
 
-rv64tag_si = alucheck-s loadcheck-s storecheck-s pctag-s jmpcheck-s fetchcheck-s
+rv64tag_si = loadcheck-s storecheck-s jmpcheck-s 
 
 tagcaches = loadstore
 

@@ -178,7 +178,8 @@ class BaseConfig extends Config (
       case WordBits => site(XLen)
 
       //L2 $
-      case UseL2Cache => false
+      case UseL2Cache => true
+
       case NAcquireTransactors => Knob("L2_XACTORS")
       case L2StoreDataQueueDepth => 1
       case NSecondaryMisses => 4
@@ -193,8 +194,8 @@ class BaseConfig extends Config (
       }: PF
 
       // Tag Cache
-      case UseTagMem => false
-      case TagBits => 4
+      case UseTagMem => true
+      case TagBits => 8
       case TagMapRatio => site(CacheBlockBytes) * 8
       case TCMemTransactors  => Knob("TC_MEM_XACTORS")
       case TCTagTransactors  => Knob("TC_TAG_XACTORS")
@@ -208,7 +209,17 @@ class BaseConfig extends Config (
 
       //Tile Constants
       case NTiles => Knob("NTILES")
-      case BuildRoCC => Nil
+      //case BuildRoCC => Nil
+      case BuildRoCC => Seq(
+        RoccParameters(
+          opcodes = OpcodeSet.custom0,
+          generator = (p: Parameters) => Module(new DFIAccelerator()(p)),
+          nMemChannels = 0,
+          nPTWPorts  = 0,
+          csrs = Nil,
+          useFPU = false
+        )
+      )
       case RoccNMemChannels => site(BuildRoCC).map(_.nMemChannels).foldLeft(0)(_ + _)
       case RoccNPTWPorts => site(BuildRoCC).map(_.nPTWPorts).foldLeft(0)(_ + _)
       case RoccNCSRs => site(BuildRoCC).map(_.csrs.size).foldLeft(0)(_ + _)
@@ -373,7 +384,7 @@ class BaseConfig extends Config (
 class WithTagConfig extends Config (
   (pname,site,here) => pname match {
     case UseTagMem => true
-    case TagBits => 4
+    case TagBits => 8
   }
 )
 
@@ -528,3 +539,5 @@ class BigParallelTCConfig extends Config(new WithParallelTCConfig ++ new BigTCCo
 class SmallTCConfig extends Config(new WithSmallTCConfig ++ new BaseTagConfig)
 class SmallParallelTCConfig extends Config(new WithParallelTCConfig ++ new SmallTCConfig)
 class SmallSmallTCConfig extends Config(new With128MRamConfig ++ new WithSmallTCConfig ++ new BaseTagConfig)
+
+

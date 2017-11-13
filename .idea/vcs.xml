@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fpga" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fpga/bootloader" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/minion_subsystem" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/opensocdebug/glip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/opensocdebug/software" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-tools/riscv-fesvr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-tools/riscv-gnu-toolchain" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-tools/riscv-isa-sim" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-tools/riscv-opcodes" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-tools/riscv-pk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/riscv-tools/riscv-tests" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/socip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/socip/uart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vcs/riscv-tests" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/verilator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vsim/riscv-tests" vcs="Git" />
+  </component>
+</project>
